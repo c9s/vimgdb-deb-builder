@@ -13,7 +13,8 @@ clean:
 		rm -rf $(VIMDEBBUILD_DIR)
 		rm -rf $(VIM_DIR)
 		rm -rf $(VIMGDB_DIR)
-
+		rm -rf *.deb
+		rm -rf vimgdb_72*
 deb:
 		sudo apt-get build-dep vim-gnome
 		wget -c ftp://ftp.vim.org/pub/vim/unix/vim-7.2.tar.bz2
