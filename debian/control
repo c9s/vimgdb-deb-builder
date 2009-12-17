@@ -1,0 +1,18 @@
+Source: vimgdb
+Section: devel
+Priority: extra
+Maintainer: Yo-An Lin <cornelius.howl@gmail.com>
+Build-Depends: debhelper (>= 7), autotools-dev
+Standards-Version: 3.8.1
+Homepage: http://clewn.sourceforge.net
+
+Package: vimgdb
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>
+
+Package: vimgdb-doc
+Architecture: all
+Description: documentation for vimgdb
+ <insert long description, indented with spaces>

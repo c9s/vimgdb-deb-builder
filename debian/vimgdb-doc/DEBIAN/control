@@ -1,0 +1,11 @@
+Package: vimgdb-doc
+Source: vimgdb
+Version: 72-1
+Architecture: all
+Maintainer: Yo-An Lin <cornelius.howl@gmail.com>
+Installed-Size: 32
+Section: devel
+Priority: extra
+Homepage: http://clewn.sourceforge.net
+Description: documentation for vimgdb
+ <insert long description, indented with spaces>
