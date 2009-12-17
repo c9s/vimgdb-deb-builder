@@ -7,7 +7,9 @@ VIMGDB_DIR=vimgdb
 VIMDEBBUILD_DIR=vimgdb-72
 
 CFLAGS="-O3 -D_FORTIFY_SOURCE=1"
-EXTRA_OPTIONS="--with-vim-name=$(VIM_NAME) --disable-selinux --disable-acl --enable-gdb --disable-gtktest --disable-gui" 
+EXTRA_OPTIONS="--with-vim-name=$(VIM_NAME) \
+	--disable-selinux \
+	--enable-cscope --enable-multibyte --disable-acl --enable-gdb --disable-gtktest --disable-gui"
 
 VIM_SOURCE_FILENAME=vim-7.2.tar.bz2
 VIMGDB_FILENAME=vimgdb72-1.14.tar.gz
@@ -34,6 +36,7 @@ clean:
 		rm $(VIM_SOURCE_FILENAME)
 		rm $(VIMGDB_FILENAME)
 deb: clean-build build-deps
+		echo $(EXTRA_OPTIONS)
 		wget -c ftp://ftp.vim.org/pub/vim/unix/vim-7.2.tar.bz2 -O $(VIM_SOURCE_FILENAME)
 		tar xvf $(VIM_SOURCE_FILENAME)
 		mv $(VIM_DIR) $(VIMDEBBUILD_DIR)
